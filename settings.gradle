@@ -8,3 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "lesson_android_kotlin"
 include ':app'
+include ':lesson2'
