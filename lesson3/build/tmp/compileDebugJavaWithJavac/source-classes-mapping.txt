@@ -1,0 +1,2 @@
+na/severinchik/lesson3/BuildConfig.java
+ na.severinchik.lesson3.BuildConfig
