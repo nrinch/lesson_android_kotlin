@@ -10,4 +10,4 @@ rootProject.name = "lesson_android_kotlin"
 include ':app'
 include ':lesson2'
 include ':lesson3'
-include ':leeson4'
+include ':lesson4'
