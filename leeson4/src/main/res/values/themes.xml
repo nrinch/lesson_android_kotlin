@@ -13,4 +13,26 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="CustomButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/teal_200</item>
+
+    </style>
+
+    <style name="CalcButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:layout_height">@dimen/scalable_for_constraint</item>
+        <item name="android:layout_width">@dimen/scalable_for_constraint</item>
+        <item name="android:textSize">@dimen/semi_large</item>
+    </style>
+
+    <style name="NumbersButtonStyle" parent="CalcButtonStyle">
+        <item name="android:textColor">@android:color/darker_gray</item>
+        <item name="backgroundTint">@color/black</item>
+    </style>
+
+    <style name="OperationButtonStyle" parent="CalcButtonStyle">
+        <item name="backgroundTint">@android:color/holo_red_dark</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
 </resources>
