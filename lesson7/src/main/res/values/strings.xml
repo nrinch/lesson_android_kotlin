@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">lesson7</string>
+    <string name="add_plus">+</string>
+    <string name="list">List</string>
+    <string name="your_limit">Your Limit</string>
+    <string name="save">Save</string>
+    <string name="empty_list">EMPTY LIST</string>
+</resources>

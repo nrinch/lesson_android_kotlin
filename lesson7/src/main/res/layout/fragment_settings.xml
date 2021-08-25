@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/fs_to_list"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp48"
+        android:gravity="start"
+        android:text="@string/list" />
+
+    <Button
+        android:id="@+id/fs_limit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp48"
+        android:gravity="start"
+        android:text="@string/your_limit" />
+
+</LinearLayout>
