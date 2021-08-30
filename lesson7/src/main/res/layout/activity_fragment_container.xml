@@ -8,7 +8,11 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/cfa_fragment_container"
-        android:name="na.severinchik.lesson7.presentation.fragments.mainFragment.MainFragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/mobile_navigation" />
+
+
 </FrameLayout>

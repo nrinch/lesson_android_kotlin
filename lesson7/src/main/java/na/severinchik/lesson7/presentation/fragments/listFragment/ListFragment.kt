@@ -5,12 +5,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.LifecycleCoroutineScope
+import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.onEach
+import na.severinchik.lesson7.R
 import na.severinchik.lesson7.databinding.FragmentListBinding
-import na.severinchik.lesson7.databinding.FragmentMainBinding
-import na.severinchik.lesson7.presentation.dialogs.DialogFragmentAdd
-import na.severinchik.lesson7.presentation.fragments.mainFragment.MainViewModel
 
 class ListFragment : Fragment() {
 
@@ -29,16 +32,26 @@ class ListFragment : Fragment() {
         binding = FragmentListBinding.inflate(inflater, container, false)
 
         binding.flAdd.setOnClickListener {
-            activity?.supportFragmentManager?.let { fragmentManager ->
-                openAddDialog(fragmentManager)
-            }
+            openAddDialog()
         }
+        viewModel.alcoholFlow.onEach {
+//            adapter.submistList(it)
+//            adapter.notifyAll()
+        }.launchWhenResumed(lifecycleScope)
+
 
         return binding.root
     }
 
-    private fun openAddDialog(fragmentManager: FragmentManager) {
-        DialogFragmentAdd().show(fragmentManager, DialogFragmentAdd.TAG)
+    private fun openAddDialog() {
+        findNavController().navigate(R.id.action_listFragment_to_dialogFragmentAdd)
     }
 
+
+}
+
+fun <T> Flow<T>.launchWhenResumed(lifecycleCoroutineScope: LifecycleCoroutineScope){
+    lifecycleCoroutineScope.launchWhenResumed {
+        this@launchWhenResumed.collect()
+    }
 }

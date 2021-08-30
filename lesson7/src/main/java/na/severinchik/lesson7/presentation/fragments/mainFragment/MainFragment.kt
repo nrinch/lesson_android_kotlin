@@ -4,16 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import na.severinchik.lesson7.R
 import na.severinchik.lesson7.databinding.FragmentMainBinding
-import na.severinchik.lesson7.presentation.dialogs.DialogFragmentAdd
-import na.severinchik.lesson7.presentation.dialogs.DialogFragmentList
-import na.severinchik.lesson7.presentation.fragments.listFragment.ListFragment
-import na.severinchik.lesson7.presentation.fragments.settingFragment.SettingFragment
 
 
 class MainFragment : Fragment() {
@@ -33,28 +28,21 @@ class MainFragment : Fragment() {
         binding = FragmentMainBinding.inflate(inflater, container, false)
 
         binding.fmSettingBtn.setOnClickListener {
-            openSettingFragment(parentFragmentManager)
+            openSettingFragment()
         }
         binding.fmAddBtn.setOnClickListener {
-            activity?.supportFragmentManager?.let { fragmentManager ->
-                DialogFragmentList().show(
-                    fragmentManager,
-                    DialogFragmentList.TAG
-                )
-            }
+            openAddDialog()
         }
         return binding.root
     }
 
 
-    private fun openSettingFragment(fragmentManager: FragmentManager) {
-        fragmentManager
-            .beginTransaction()
-            .replace(R.id.cfa_fragment_container, SettingFragment())
-            .addToBackStack(TAG)
-            .commit()
+    private fun openSettingFragment() {
+        findNavController().navigate(R.id.action_mainFragment_to_settingFragment)
+    }
 
-        Toast.makeText(activity?.baseContext, "Success", Toast.LENGTH_LONG).show()
+    private fun openAddDialog() {
+        findNavController().navigate(R.id.action_mainFragment_to_dialogFragmentList)
     }
 
 }

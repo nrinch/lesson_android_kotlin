@@ -16,6 +16,10 @@
         "source": "D:\\Dev\\lesson_android_kotlin\\lesson3\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
+        "merged": "D:\\Dev\\lesson_android_kotlin\\lesson3\\build\\intermediates\\merged_res\\debug\\layout_activity_life_cycle.xml.flat",
+        "source": "D:\\Dev\\lesson_android_kotlin\\lesson3\\src\\main\\res\\layout\\activity_life_cycle.xml"
+    },
+    {
         "merged": "D:\\Dev\\lesson_android_kotlin\\lesson3\\build\\intermediates\\merged_res\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
         "source": "D:\\Dev\\lesson_android_kotlin\\lesson3\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
     },

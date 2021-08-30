@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/mainFragment">
+
+
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="na.severinchik.lesson7.presentation.fragments.settingFragment.SettingFragment"
+        android:label="SettingFragment"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_settingFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/dialogFragmentAdd"
+        android:name="na.severinchik.lesson7.presentation.dialogs.add.DialogFragmentAdd"
+        android:label="DialogFragmentAdd"
+        tools:layout="@layout/fragment_dialog_add" />
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="na.severinchik.lesson7.presentation.fragments.listFragment.ListFragment"
+        android:label="ListFragment"
+        tools:layout="@layout/fragment_list">
+        <action
+            android:id="@+id/action_listFragment_to_dialogFragmentAdd"
+            app:destination="@id/dialogFragmentAdd" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="na.severinchik.lesson7.presentation.fragments.mainFragment.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_dialogFragmentList"
+            app:destination="@id/dialogFragmentList" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/dialogFragmentList"
+        android:name="na.severinchik.lesson7.presentation.dialogs.list.DialogFragmentList"
+        android:label="DialogFragmentList"
+        tools:layout="@layout/fragment_dialog_list" />
+</navigation>

@@ -5,4 +5,9 @@
     <string name="your_limit">Your Limit</string>
     <string name="save">Save</string>
     <string name="empty_list">EMPTY LIST</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="when_you_have_enough">When you have enough?</string>
 </resources>

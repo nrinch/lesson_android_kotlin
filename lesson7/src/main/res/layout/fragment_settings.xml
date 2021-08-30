@@ -8,14 +8,42 @@
         android:id="@+id/fs_to_list"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp48"
+        android:layout_margin="@dimen/dp10"
         android:gravity="start"
         android:text="@string/list" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="@android:color/darker_gray" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        android:fontFamily="sans-serif"
+        android:text="@string/your_limit"
+        android:textFontWeight="800"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/fs_limit_et"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp48"
+        android:layout_marginHorizontal="@dimen/dp10"
+        android:hint="@string/when_you_have_enough" />
 
     <Button
         android:id="@+id/fs_limit_btn"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp48"
+        android:layout_margin="@dimen/dp10"
         android:gravity="start"
-        android:text="@string/your_limit" />
+        android:text="@string/save" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
 
 </LinearLayout>
