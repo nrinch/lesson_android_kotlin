@@ -4,10 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import na.severinchik.lesson7.data.entity.Alcohol
 import na.severinchik.lesson7.databinding.FragmentDialogAddBinding
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class DialogFragmentAdd : BottomSheetDialogFragment() {
 
@@ -17,7 +17,7 @@ class DialogFragmentAdd : BottomSheetDialogFragment() {
 
     lateinit var binding: FragmentDialogAddBinding
 
-    private val viewModel: AddViewModel by viewModels()
+    private val viewModel: AddViewModel by viewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater,

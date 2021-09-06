@@ -11,7 +11,9 @@ abstract class AlcoholDB : RoomDatabase() {
 
     abstract fun alcoholDao(): AlcoholDao
 
-
+    companion object{
+        const val DATABASE_NAME = "AlchoDB"
+    }
 }
 
 object InstanceAlcoDB {

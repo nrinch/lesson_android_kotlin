@@ -3,6 +3,7 @@ buildscript {
     //создана переменная для версии библиотеки
     ext{
         kotlin_version = '1.5.20'
+        koin_version = '3.0.1'
     }
     repositories {
         google()

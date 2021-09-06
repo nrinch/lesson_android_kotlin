@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.LifecycleCoroutineScope
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
@@ -14,6 +13,8 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.onEach
 import na.severinchik.lesson7.R
 import na.severinchik.lesson7.databinding.FragmentListBinding
+import na.severinchik.lesson7.presentation.data.AlcoholAdapter
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class ListFragment : Fragment() {
 
@@ -21,22 +22,29 @@ class ListFragment : Fragment() {
         val TAG: String = ListFragment.javaClass.name
     }
 
-    private lateinit var binding: FragmentListBinding
-    private val viewModel: ListViewModel by viewModels()
+    private val adapter: AlcoholAdapter = AlcoholAdapter()
+
+    private var _binding: FragmentListBinding? = null
+    private val binding get() = _binding!!
+
+    private val viewModel: ListViewModel by viewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentListBinding.inflate(inflater, container, false)
+        _binding = FragmentListBinding.inflate(inflater, container, false)
 
         binding.flAdd.setOnClickListener {
             openAddDialog()
         }
-        viewModel.alcoholFlow.onEach {
-//            adapter.submistList(it)
-//            adapter.notifyAll()
+
+        binding.flList.adapter = adapter
+
+        viewModel.alcoholFlow.onEach { list->
+            adapter.submitList(list)
+            adapter.notifyDataSetChanged()
         }.launchWhenResumed(lifecycleScope)
 
 
@@ -48,9 +56,14 @@ class ListFragment : Fragment() {
     }
 
 
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
+
 }
 
-fun <T> Flow<T>.launchWhenResumed(lifecycleCoroutineScope: LifecycleCoroutineScope){
+fun <T> Flow<T>.launchWhenResumed(lifecycleCoroutineScope: LifecycleCoroutineScope) {
     lifecycleCoroutineScope.launchWhenResumed {
         this@launchWhenResumed.collect()
     }
