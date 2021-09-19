@@ -12,7 +12,7 @@ class AlcoRepositories(val dao: AlcoholDao) : BaseEntityRepository<Alcohol> {
 
     override fun getAll(): Flow<List<Alcohol>> = dao.getAll()
 
-    override fun getFirstById(id: Int): Alcohol = dao.getById(id)
+    override suspend fun getFirstById(id: Int): Alcohol = dao.getById(id)
 
     override suspend fun update(item: Alcohol) {
         dao.update(item)

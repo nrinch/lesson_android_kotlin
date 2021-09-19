@@ -25,13 +25,28 @@ class MainFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
         binding = FragmentMainBinding.inflate(inflater, container, false)
 
+        binding.fmProgress.max = viewModel.getLimit()
         binding.fmSettingBtn.setOnClickListener {
             openSettingFragment()
         }
         binding.fmAddBtn.setOnClickListener {
             openAddDialog()
+        }
+        binding.fmUpdate.setOnClickListener {
+            val current: Double = viewModel.getState().toDouble()
+            val max: Double = viewModel.getLimit().toDouble()
+
+            if (current < max) {
+                val result: Double = 100 - ((current / max) * 100.0)
+                binding.fmProgressValue.text = "$result %"
+                binding.fmProgress.progress = (max - current).toInt()
+            } else {
+                binding.fmProgressValue.text = "$max %"
+                binding.fmProgress.progress = max.toInt()
+            }
         }
         return binding.root
     }

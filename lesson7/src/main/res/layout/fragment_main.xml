@@ -12,8 +12,8 @@
         android:layout_height="@dimen/dp48"
         android:layout_margin="@dimen/dp20"
         android:background="@android:color/transparent"
-        android:src="@drawable/ic_settings_24"
         android:scaleType="fitCenter"
+        android:src="@drawable/ic_settings_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:tint="@color/black" />
@@ -54,5 +54,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:tint="@color/black" />
+
+    <Button
+        android:id="@+id/fm_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:layout_marginTop="@dimen/dp20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fm_progress" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

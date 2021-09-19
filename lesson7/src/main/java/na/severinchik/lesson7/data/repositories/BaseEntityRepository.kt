@@ -11,5 +11,5 @@ interface BaseEntityRepository<T> {
 
     fun getAll(): Flow<List<Alcohol>>
 
-    fun getFirstById(id: Int):T
+    suspend fun getFirstById(id: Int):T
 }

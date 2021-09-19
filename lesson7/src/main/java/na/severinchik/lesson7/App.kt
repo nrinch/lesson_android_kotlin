@@ -3,10 +3,13 @@ package na.severinchik.lesson7
 import android.app.Application
 import androidx.room.Room
 import na.severinchik.lesson7.data.repositories.AlcoRepositories
+import na.severinchik.lesson7.data.repositories.UserStateRepository
 import na.severinchik.lesson7.data.room.AlcoholDB
 import na.severinchik.lesson7.data.room.AlcoholDao
+import na.severinchik.lesson7.data.storage.UserStorage
 import na.severinchik.lesson7.domain.AlcoholUseCaseImpl
 import na.severinchik.lesson7.presentation.dialogs.add.AddViewModel
+import na.severinchik.lesson7.presentation.dialogs.list.DialogListViewModel
 import na.severinchik.lesson7.presentation.fragments.listFragment.ListViewModel
 import org.koin.android.ext.koin.androidApplication
 import org.koin.android.ext.koin.androidContext
@@ -47,6 +50,10 @@ val dataModule = module {
     single {
         provideAlcoholDao(database = get())
     }
+
+    single {
+        UserStorage(androidApplication())
+    }
 }
 
 val useCaseModule = module {
@@ -54,8 +61,15 @@ val useCaseModule = module {
         AlcoRepositories(dao = get())
     }
 
+    single {
+        UserStateRepository(storage = get())
+    }
+
     single() {
-        AlcoholUseCaseImpl(repositories = get())
+        AlcoholUseCaseImpl(
+            userStateRepository = get(),
+            alcoRepositories = get()
+        )
     }
 }
 
@@ -65,5 +79,8 @@ val viewModelModule = module {
     }
     viewModel {
         AddViewModel(useCaseImpl = get())
+    }
+    viewModel {
+        DialogListViewModel(useCaseImpl = get())
     }
 }

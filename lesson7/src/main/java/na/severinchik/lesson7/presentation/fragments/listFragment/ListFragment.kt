@@ -14,15 +14,17 @@ import kotlinx.coroutines.flow.onEach
 import na.severinchik.lesson7.R
 import na.severinchik.lesson7.databinding.FragmentListBinding
 import na.severinchik.lesson7.presentation.data.AlcoholAdapter
+import na.severinchik.lesson7.presentation.data.AlcoholItem
+import na.severinchik.lesson7.presentation.data.AlcoholItemClickListener
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class ListFragment : Fragment() {
+class ListFragment : Fragment(), AlcoholItemClickListener {
 
     companion object {
         val TAG: String = ListFragment.javaClass.name
     }
 
-    private val adapter: AlcoholAdapter = AlcoholAdapter()
+    private val adapter: AlcoholAdapter = AlcoholAdapter(this)
 
     private var _binding: FragmentListBinding? = null
     private val binding get() = _binding!!
@@ -60,6 +62,8 @@ class ListFragment : Fragment() {
         super.onDestroy()
         _binding = null
     }
+
+    override fun click(alcoholItem: AlcoholItem) = Unit
 
 }
 
