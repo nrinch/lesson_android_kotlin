@@ -5,6 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
 import na.severinchik.lesson13.R
 import na.severinchik.lesson13.data.localstorage.dao.DaoCategory
@@ -22,21 +23,33 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun daoNote(): DaoNote
 
     companion object {
-        fun getInstance(context: Context): AppDatabase {
-            return Room.databaseBuilder(
-                context.applicationContext,
-                AppDatabase::class.java,
-                DB_NAME
-            ).addCallback(object : Callback() {
+        private var INSTANCE: AppDatabase? = null
+
+        private fun createInstance(context: Context) = Room.databaseBuilder(
+            context.applicationContext,
+            AppDatabase::class.java,
+            DB_NAME
+        )
+            .addCallback(object : Callback() {
                 override fun onCreate(db: SupportSQLiteDatabase) {
                     super.onCreate(db)
                     runBlocking {
-                        getInstance(context).daoCategory().saveAll(CATEGORIES(context))
-                        getInstance(context).daoNote().saveAll(NOTES)
+                        with(Dispatchers.IO) {
+                            getInstance(context).daoCategory().saveAll(CATEGORIES(context))
+                            getInstance(context).daoNote().saveAll(NOTES)
+                        }
                     }
                 }
             })
-                .build()
+            .build()
+
+        fun getInstance(context: Context): AppDatabase {
+            synchronized(this) {
+                if (INSTANCE == null) {
+                    INSTANCE = createInstance(context)
+                }
+                return INSTANCE!!
+            }
         }
     }
 }

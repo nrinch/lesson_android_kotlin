@@ -22,10 +22,7 @@ interface DaoCategory {
     suspend fun deleteAll()
 
     @Query("SELECT * FROM Category")
-    fun findAll(): Flow<List<CategoryDto>>
-
-    @Query("SELECT * FROM Category")
-    fun getAll(): List<CategoryDto>
+    fun getAll(): Flow<List<CategoryDto>>
 
     @Query("SELECT * FROM Category LIMIT 1")
     suspend fun getDefaultCategory(): CategoryDto

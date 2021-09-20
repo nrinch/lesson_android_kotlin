@@ -23,7 +23,7 @@
 
 
     <ImageButton
-        android:id="@+id/burger"
+        android:id="@+id/am_menu"
         android:layout_width="0dp"
         android:layout_height="@dimen/width_category_notes"
         android:background="@color/colorBackground"
@@ -48,7 +48,7 @@
         app:layout_constraintBottom_toTopOf="@id/recyclerViewCategory"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/separator_container"
-        app:layout_constraintTop_toBottomOf="@id/burger"
+        app:layout_constraintTop_toBottomOf="@id/am_menu"
         app:layout_constraintVertical_weight="1"
         app:tint="@color/colorIconBlack" />
 
@@ -57,6 +57,7 @@
         android:id="@+id/recyclerViewCategory"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toTopOf="@id/calendar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/separator_container"

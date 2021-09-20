@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import na.severinchik.lesson13.R
 import na.severinchik.lesson13.databinding.FragmentAddNoteBinding
 import na.severinchik.lesson13.databinding.FragmentMenuBinding
 import na.severinchik.lesson13.databinding.FragmentMenuCategoriesBinding
@@ -23,4 +24,12 @@ class MenuCategoriesFragment : Fragment() {
         return binding.root
 
     }
+
+    private fun back() {
+        parentFragmentManager.beginTransaction()
+            .replace(R.id.menu_fragment_container, MenuFragment())
+            .commit()
+    }
+
+
 }
