@@ -8,9 +8,8 @@ import android.widget.BaseAdapter
 import android.widget.Button
 import android.widget.TextView
 import na.severinchik.lesson13.R
-import java.lang.String
-import na.severinchik.lesson13.data.entity.*
 import na.severinchik.lesson13.data.localstorage.dto.CategoryDto
+import java.lang.String
 
 class CategorySpinnerAdapter(context: Context, newData: List<CategoryDto>) :
     BaseAdapter() {

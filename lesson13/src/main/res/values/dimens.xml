@@ -10,4 +10,5 @@
     <dimen name="margins_vertical_notes">48dp</dimen>
     <dimen name="width_dialog_categories">300dp</dimen>
     <dimen name="height_dialog_categories">300dp</dimen>
+    <dimen name="dp12">12dp</dimen>
 </resources>

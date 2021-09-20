@@ -10,16 +10,16 @@ interface DaoCategory {
     suspend fun saveAll(categories: List<CategoryDto>)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insert(category: CategoryDto)
+    suspend fun insert(category: CategoryDto)
 
     @Update
-    fun update(category: CategoryDto)
+    suspend fun update(category: CategoryDto)
 
     @Delete
-    fun delete(category: CategoryDto)
+    suspend fun delete(category: CategoryDto)
 
     @Query("DELETE FROM Category")
-    fun deleteAll()
+    suspend fun deleteAll()
 
     @Query("SELECT * FROM Category")
     fun findAll(): Flow<List<CategoryDto>>
@@ -28,8 +28,8 @@ interface DaoCategory {
     fun getAll(): List<CategoryDto>
 
     @Query("SELECT * FROM Category LIMIT 1")
-    fun getDefaultCategory(): CategoryDto
+    suspend fun getDefaultCategory(): CategoryDto
 
     @Query("SELECT * FROM Category WHERE id=:id")
-    fun getById(id: Long): CategoryDto
+    suspend fun getById(id: Long): CategoryDto
 }

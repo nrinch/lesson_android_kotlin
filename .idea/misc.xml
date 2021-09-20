@@ -11,13 +11,20 @@
         <entry key="..\:/Dev/lesson_android_kotlin/lesson13/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Dev/lesson_android_kotlin/lesson13/src/main/res/layout/activity_menu.xml" value="0.20878623188405798" />
         <entry key="..\:/Dev/lesson_android_kotlin/lesson13/src/main/res/layout/category_add.xml" value="0.26721014492753625" />
-        <entry key="..\:/Dev/lesson_android_kotlin/lesson13/src/main/res/layout/category_edit.xml" value="0.19217081850533807" />
+        <entry key="..\:/Dev/lesson_android_kotlin/lesson13/src/main/res/layout/category_edit.xml" value="0.33" />
         <entry key="..\:/Dev/lesson_android_kotlin/lesson13/src/main/res/layout/category_item.xml" value="0.33" />
+        <entry key="..\:/Dev/lesson_android_kotlin/lesson13/src/main/res/layout/category_menu_item.xml" value="0.3482789855072464" />
         <entry key="..\:/Dev/lesson_android_kotlin/lesson13/src/main/res/layout/dialog_del_category.xml" value="0.26721014492753625" />
         <entry key="..\:/Dev/lesson_android_kotlin/lesson13/src/main/res/layout/error_dialog.xml" value="0.2559241706161137" />
         <entry key="..\:/Dev/lesson_android_kotlin/lesson13/src/main/res/layout/fragment_add_note.xml" value="0.26721014492753625" />
+        <entry key="..\:/Dev/lesson_android_kotlin/lesson13/src/main/res/layout/fragment_blank.xml" value="0.3482789855072464" />
         <entry key="..\:/Dev/lesson_android_kotlin/lesson13/src/main/res/layout/fragment_menu.xml" value="0.1875" />
         <entry key="..\:/Dev/lesson_android_kotlin/lesson13/src/main/res/layout/fragment_menu_categories.xml" value="0.26721014492753625" />
+        <entry key="..\:/Dev/lesson_android_kotlin/lesson13/src/main/res/layout/fragment_notes.xml" value="0.3482789855072464" />
+        <entry key="..\:/Dev/lesson_android_kotlin/lesson13/src/main/res/layout/item_menu.xml" value="0.45764854614412137" />
+        <entry key="..\:/Dev/lesson_android_kotlin/lesson13/src/main/res/layout/item_small_note.xml" value="0.3482789855072464" />
+        <entry key="..\:/Dev/lesson_android_kotlin/lesson13/src/main/res/layout/spinner_category_item.xml" value="0.67" />
+        <entry key="..\:/Dev/lesson_android_kotlin/lesson13/src/main/res/layout/spinner_color_item.xml" value="0.3482789855072464" />
         <entry key="..\:/Dev/lesson_android_kotlin/lesson3/src/main/res/layout-land/activity_maim.xml" value="0.2" />
         <entry key="..\:/Dev/lesson_android_kotlin/lesson3/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Dev/lesson_android_kotlin/lesson3/src/main/res/layout/sample_linear_layout.xml" value="0.75" />

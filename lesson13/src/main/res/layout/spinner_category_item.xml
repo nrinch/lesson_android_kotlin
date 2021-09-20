@@ -1,53 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:descendantFocusability="blocksDescendants"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants">
 
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sci_card"
         android:layout_width="@dimen/width_category_notes"
         android:layout_height="@dimen/width_category_notes"
+        android:layout_margin="12dp"
+        app:cardBackgroundColor="@color/colorDefaultCategory"
+        app:cardCornerRadius="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardElevation="5dp">
 
-        <android.support.v7.widget.CardView
+        <Button
+            android:id="@+id/ctg_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="12dp"
-            app:cardBackgroundColor="@color/colorDefaultCategory"
-            app:cardCornerRadius="5dp"
-            app:cardElevation="5dp">
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:text="W"
+            android:textColor="@color/colorSecondary"
+            android:textSize="22sp" />
+    </androidx.cardview.widget.CardView>
 
-            <Button
-                android:id="@+id/ctg_button"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:background="@android:color/transparent"
-                android:text="W"
-                android:textColor="@color/colorSecondary"
-                android:textSize="28sp" />
-        </android.support.v7.widget.CardView>
-
-
-    </RelativeLayout>
 
     <TextView
         android:id="@+id/full_name_category"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:gravity="center_vertical"
+        android:layout_marginLeft="@dimen/dp12"
         android:text="W"
         android:textColor="@color/colorBackground"
-        android:textSize="28sp"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/relativeLayout"
+        app:layout_constraintStart_toEndOf="@+id/sci_card"
         app:layout_constraintTop_toTopOf="parent" />
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

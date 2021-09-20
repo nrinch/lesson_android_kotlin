@@ -36,8 +36,9 @@
         app:tint="@color/colorIconBlack" />
 
 
-    <Button
+    <include
         android:id="@+id/button_all_categoris"
+        layout="@layout/category_item"
         android:layout_width="0dp"
         android:layout_height="@dimen/width_category_notes"
         android:background="@color/colorBackground"

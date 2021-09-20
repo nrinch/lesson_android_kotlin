@@ -22,8 +22,6 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun daoNote(): DaoNote
 
     companion object {
-
-
         fun getInstance(context: Context): AppDatabase {
             return Room.databaseBuilder(
                 context.applicationContext,

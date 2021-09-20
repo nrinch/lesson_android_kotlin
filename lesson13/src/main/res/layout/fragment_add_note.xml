@@ -12,9 +12,9 @@
         android:layout_height="60dp"
         android:background="@android:color/transparent"
         android:src="@drawable/baseline_keyboard_backspace_black_18dp"
-        android:tint="@color/colorBackground"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/colorBackground" />
 
     <TextView
 
