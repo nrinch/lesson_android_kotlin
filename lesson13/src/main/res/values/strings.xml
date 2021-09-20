@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">lesson13</string>
+    <string name="tree_dots">...</string>
+    <string name="are_sure_delete_this_note">Are sure delete this note?</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="task_list">TASKS LIST</string>
+    <string name="all_tasks">All Tasks</string>
+    <string name="categories">Categories</string>
+    <string name="todo">TODO</string>
+
+</resources>

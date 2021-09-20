@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f5a921</color>
+    <color name="colorPrimary2">#a362ea</color>
+
+    <color name="colorPrimaryDark">#222429</color>
+    <color name="colorAccent">#f55c33</color>
+    <color name="colorBackground">#222429</color>
+    <color name="colorSecondary">#cdd5e1</color>
+    <color name="colotWhiteText">#fff</color>
+    <color name="colorIconBlack">#686e7b</color>
+    <color name="colorDefaultCategory">#353943</color>
+
+    <color name="catClrRed">#F44336</color>
+    <color name="catClrPink">#E91E63</color>
+    <color name="catClrPurple">#9C27B0</color>
+    <color name="catClrDeepPurple">#673AB7</color>
+    <color name="catClrIndigo">#3F51B5</color>
+    <color name="catClrBlue">#2196F3</color>
+    <color name="catClrCyan">#00BCD4</color>
+    <color name="catClrTeal">#009688</color>
+    <color name="catClrGreen">#4CAF50</color>
+    <color name="catClrLightGreen">#8BC34A</color>
+    <color name="catClrYellow">#FFEB3B</color>
+    <color name="catClrAmber">#FFC107</color>
+    <color name="catClrOrange">#FF9800</color>
+
+
+
+    <array name="categories_color">
+    <item>@color/catClrRed</item>
+    <item>@color/catClrPink</item>
+    <item>@color/catClrPurple</item>
+    <item>@color/catClrDeepPurple</item>
+    <item>@color/catClrIndigo</item>
+    <item>@color/catClrBlue</item>
+    <item>@color/catClrCyan</item>
+    <item>@color/catClrTeal</item>
+    <item>@color/catClrGreen</item>
+    <item>@color/catClrLightGreen</item>
+    <item>@color/catClrYellow</item>
+    <item>@color/catClrAmber</item>
+    <item>@color/catClrOrange</item>
+
+    </array>
+</resources>

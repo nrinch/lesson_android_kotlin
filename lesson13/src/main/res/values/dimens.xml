@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="width_category_notes">75dp</dimen>
+
+    <dimen name="big_font_size">48sp</dimen>
+    <dimen name="medium_font_size">24sp</dimen>
+    <dimen name="small_font_size">12sp</dimen>
+    <dimen name="add_button_height">64dp</dimen>
+    <dimen name="left_margin_title_notes">24dp</dimen>
+    <dimen name="margins_vertical_notes">48dp</dimen>
+    <dimen name="width_dialog_categories">300dp</dimen>
+    <dimen name="height_dialog_categories">300dp</dimen>
+</resources>

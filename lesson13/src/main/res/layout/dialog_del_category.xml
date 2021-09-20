@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    app:cardCornerRadius="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:text="@string/are_sure_delete_this_note"
+            android:textSize="@dimen/medium_font_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@android:color/holo_red_light"
+                app:cardCornerRadius="10dp">
+
+                <Button
+                    android:id="@+id/dlg_del_ctf_accept"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/delete"
+                    android:textColor="@color/colotWhiteText"
+                    android:textSize="@dimen/small_font_size" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@android:color/darker_gray"
+                app:cardCornerRadius="10dp">
+
+                <Button
+                    android:id="@+id/dlg_del_ctf_cancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="sans-serif-black"
+                    android:text="@string/cancel"
+                    android:textColor="@color/colotWhiteText"
+                    android:textSize="@dimen/small_font_size" />
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

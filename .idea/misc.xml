@@ -3,6 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Dev/lesson_android_kotlin/lesson13/src/main/res/drawable/note_small_default_view.xml" value="0.15833333333333333" />
+        <entry key="..\:/Dev/lesson_android_kotlin/lesson13/src/main/res/drawable/note_small_view.xml" value="0.15833333333333333" />
+        <entry key="..\:/Dev/lesson_android_kotlin/lesson13/src/main/res/drawable/rectangle.xml" value="0.15833333333333333" />
+        <entry key="..\:/Dev/lesson_android_kotlin/lesson13/src/main/res/drawable/rectangle_white.xml" value="0.15833333333333333" />
+        <entry key="..\:/Dev/lesson_android_kotlin/lesson13/src/main/res/layout/activity_calendar.xml" value="0.20878623188405798" />
+        <entry key="..\:/Dev/lesson_android_kotlin/lesson13/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Dev/lesson_android_kotlin/lesson13/src/main/res/layout/activity_menu.xml" value="0.20878623188405798" />
+        <entry key="..\:/Dev/lesson_android_kotlin/lesson13/src/main/res/layout/category_add.xml" value="0.26721014492753625" />
+        <entry key="..\:/Dev/lesson_android_kotlin/lesson13/src/main/res/layout/category_edit.xml" value="0.19217081850533807" />
+        <entry key="..\:/Dev/lesson_android_kotlin/lesson13/src/main/res/layout/category_item.xml" value="0.33" />
+        <entry key="..\:/Dev/lesson_android_kotlin/lesson13/src/main/res/layout/dialog_del_category.xml" value="0.26721014492753625" />
+        <entry key="..\:/Dev/lesson_android_kotlin/lesson13/src/main/res/layout/error_dialog.xml" value="0.2559241706161137" />
+        <entry key="..\:/Dev/lesson_android_kotlin/lesson13/src/main/res/layout/fragment_add_note.xml" value="0.26721014492753625" />
+        <entry key="..\:/Dev/lesson_android_kotlin/lesson13/src/main/res/layout/fragment_menu.xml" value="0.1875" />
+        <entry key="..\:/Dev/lesson_android_kotlin/lesson13/src/main/res/layout/fragment_menu_categories.xml" value="0.26721014492753625" />
         <entry key="..\:/Dev/lesson_android_kotlin/lesson3/src/main/res/layout-land/activity_maim.xml" value="0.2" />
         <entry key="..\:/Dev/lesson_android_kotlin/lesson3/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Dev/lesson_android_kotlin/lesson3/src/main/res/layout/sample_linear_layout.xml" value="0.75" />
